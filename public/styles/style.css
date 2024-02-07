@@ -44,13 +44,15 @@ article {
   box-shadow: 15px 15px 5px 0px rgba(97, 97, 97, 0.7);
 }
 
-
 /*Ik heb hier een border radius gegeven, zodat er samenhang zit met de border radius van de article tag*/
 figure img {
   height: 550px;
   border: 3px solid #30ffff;
   border-radius: 25px; /*Border geeft op het oog zichtbaar effect dat het in de border van het article element past*/
-  
+}
+
+.image2 {
+  display: none;
 }
 
 figure {
@@ -162,7 +164,6 @@ nav a:focus {
   height: 100%;
 }
 
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -195,8 +196,6 @@ ul li {
   text-align: left;
   text-transform: capitalize;
 }
-
-
 
 /*De kop heb ik een "glowing" animation gegeven die 1 seconde duurt*/
 h1 {
@@ -232,8 +231,86 @@ h2 {
 p {
   margin: 10px;
   line-height: 1.6; /*weergeeft een betere afstand tussen de regels van de tekst*/
-  font-family: 'Audiowide', sans-serif;
+  font-family: "Audiowide", sans-serif;
   letter-spacing: 1px;
-  
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column; /*zet alles naast elkaar*/
+    align-items: center; /*centreert alle elementen binnen het article element*/
+    justify-content: center; /*laat de content bij het begin beginnen*/
+    border: 5px groove #03f1f1; /*geeft een soort 3d-effect*/
+    margin: auto; /*zet alles gecentreerd op scherm*/
+    border-radius: 2rem; /*geeft rounde corners*/
+    color: white;
+    /*Ik heb hier een achtergrond kleur neergezet, voor het geval de afbeelding niet kan laden*/
+    background-color: #10ebebdc;
+    background-image: url(../images/patroon_donker.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+  }
+
+  section {
+    width: 90%; /*delen elk de helft binnen het article element*/
+    display: flex;
+    flex-direction: column; /*zet alles onder elkaar*/
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    margin: 2em;
+  }
+
+  .image1 {
+    display: none;
+  }
+  .image2 {
+    display: flex;
+  }
+
+  figure img {
+    height: 300px;
+    display: flex;
+    border: none;
+    justify-content: flex-start;
+  }
+
+  figure {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  figcaption {
+    margin: 2em;
+    font-size: 1.5em;
+  }
+
+  .typewriter {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    letter-spacing: 3px;
+    margin: 10px;
+  }
+
+  h2 {
+    letter-spacing: 3px;
+    margin: 10px;
+  }
+
+  p {
+    margin: 10px;
+    line-height: 1.6; /*weergeeft een betere afstand tussen de regels van de tekst*/
+    font-family: "Audiowide", sans-serif;
+    letter-spacing: 0.1em;
+  }
+}
