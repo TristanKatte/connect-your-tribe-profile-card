@@ -256,11 +256,11 @@ p {
     background-image: url(../images/patroon_donker.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    width: 85%;
   }
 
   section {
-    width: 100%; /*delen elk de helft binnen het article element*/
+    width: 95%; /*delen elk de helft binnen het article element*/
     display: flex;
     flex-direction: column; /*zet alles onder elkaar*/
     justify-content: flex-end;
@@ -285,7 +285,7 @@ p {
   }
 
   figure {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
